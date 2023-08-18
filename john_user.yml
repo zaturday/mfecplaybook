@@ -1,0 +1,9 @@
+- name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
+  ansible.builtin.user:
+    name: johnd
+    comment: John Doe
+    uid: 1077
+    group: admin
+    shell: /bin/bash
+    password_expire_max: 10
+    password_expire_min: 5
