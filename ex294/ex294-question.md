@@ -1,3 +1,5 @@
+# Prepare all managed node and control node
+### QUESTION #1:
 1. Install and configure Ansible on control node as follows:
 
    * Install the required packages.
