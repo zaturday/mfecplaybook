@@ -25,3 +25,27 @@ serverc.lab.exsample.com 192.168.1.103
 serverd.lab.exsample.com 192.168.1.104
 servere.lab.exsample.com 192.168.1.105
 ```
+***On the Control Node***
+
+# Configure the repository on all nodes
+### QUESTION #2:
+```
+Instructions:
+
+2. Create a playbook called "repo.yml" for configuring the repository on all nodes.
+BaseOS:
+name: BaseOS
+baseurl: file:///media/BaseOS/
+description: Base OS Repo
+gpgcheck: yes
+gpgkey: file:///media/RPM-GPG-KEY-redhat-release
+enabled: yes
+
+AppStream:
+name: AppStream
+baseurl: file:///media/AppStream/
+description: AppStream Repo
+gpgcheck: yes
+gpgkey: file:///media/RPM-GPG-KEY-redhat-release
+enabled: yes
+```
