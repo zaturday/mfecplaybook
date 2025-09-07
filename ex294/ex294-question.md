@@ -1,1 +1,27 @@
-ex294
+1. Install and configure Ansible on control node as follows:
+
+   * Install the required packages.
+   * Create a static inventory file called /home/student/ansible/inventory as follows:
+          -- servera is a member of dev host group.
+          -- serverb is a member of test host group.
+          -- serverc and serverd are the members of the prod host group.
+          -- servere is a member of the balancers host group.
+          -- The prod group is a member of the webservers group.
+
+   * Create a configuration file called /home/student/ansible/ansible.cfg so that:
+          -- The host inventory file should be defined as /home/student/ansible/inventory
+          -- The default roles directory is /home/student/ansible/roles
+          -- The default content collections directory is /home/student/ansible/collections
+
+   * The topography will be as follows:
+```
+control:
+work.lab.exsample.com 192.168.1.100
+
+manged node:
+servera.lab.exsample.com 192.168.1.101
+serverb.lab.exsample.com 192.168.1.102
+serverc.lab.exsample.com 192.168.1.103
+serverd.lab.exsample.com 192.168.1.104
+servere.lab.exsample.com 192.168.1.105
+```
