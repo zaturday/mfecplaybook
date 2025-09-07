@@ -68,6 +68,21 @@ Example url: http://content.example.com/rhce/ansible-posix....
 ```
 ***On the Control Node***
 
+# Use a RHEL system role
+### QUESTION #3-2:
+```
+Instructions:
+
+3-2. Install the rhel-system-roles package & create a playbook called /home/student/ansible/timesync.yml
+i) Runs on all managed nodes
+ii) Uses the timesync role
+iii) configures the role to use the currently active NTP provider
+iv) Configure the role to use the time server 172.25.254.254 or classroom.example.com
+v) Configure the role to enable the iburst parameter
+ntp server 192.168.1.30
+
+```
+
 # Install the Roles
 ### QUESTION #4:
 ```
