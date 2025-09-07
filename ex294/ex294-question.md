@@ -35,17 +35,17 @@ Instructions:
 2. Create a playbook called "repo.yml" for configuring the repository on all nodes.
 BaseOS:
 name: BaseOS
-baseurl: file:///media/BaseOS/
+baseurl: http://work.lab.example.com/rhel/BaseOS/
 description: Base OS Repo
 gpgcheck: yes
-gpgkey: file:///media/RPM-GPG-KEY-redhat-release
+gpgkey: http://work.lab.example.com/rhel/BaseOS/RPM-GPG-KEY-redhat-release
 enabled: yes
 
 AppStream:
 name: AppStream
-baseurl: file:///media/AppStream/
+baseurl: http://work.lab.example.com/rhel/AppStream/
 description: AppStream Repo
 gpgcheck: yes
-gpgkey: file:///media/RPM-GPG-KEY-redhat-release
+gpgkey: http://work.lab.example.com/rhel/RPM-GPG-KEY-redhat-release
 enabled: yes
 ```
