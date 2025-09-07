@@ -57,12 +57,33 @@ Instructions:
 
 3. Install Ansible Content Collections:
 
-i) create a directory "mycollections" under /home/rhel/ansible-files/
-ii) using the url "https://galaxy.ansible.com/download/ansible-posix-2.0.0.tar.gz" to install ansible.posix collection under the mycollections directory.
-iii) using the url "https://galaxy.ansible.com/download/community-general-11.1.0.tar.gz" to install the community-general collection under the mycollections directory.
+i) create a directory "collections" under /home/student/ansible/
+ii) using the url "https://galaxy.ansible.com/download/ansible-posix-2.0.0.tar.gz" to install ansible.posix collection under the collections directory.
+iii) using the url "https://galaxy.ansible.com/download/community-general-11.1.0.tar.gz" to install the community-general collection under the collections directory.
 ----------------------------------------------------------------------------
 
 
 NOTE ON THE EXAM:
 Example url: http://content.example.com/rhce/ansible-posix....
 ```
+***On the Control Node***
+
+# Install the Roles
+### QUESTION #4:
+```
+Instructions:
+
+4. Install the roles
+i) create directory "roles" under /home/student/roles
+ii) create a "requirements.yml" under the roles directory and download the given roles under it using the galaxy command.
+iii) 1st role name should be "balancer" and download it using this url "http://work.lab.example.com/ex294/balancer.tgz".
+iv)  2nd role name will be "phpinfo" and download it using this url "http://work.lab.example.com/ex294/phpinfo.tgz".
+
+For this example we will use (This part will not be on the exam, but for real exam you will use WGET for the content files):
+https://github.com/RedHatRanger/phpinfo.git                        (phpinfo)
+https://github.com/RedHatRanger/balancer.git                       (balancer)
+
+* Note: You can find them on galaxy.ansible.com and search for the roles "geerlingguy.haproxy" and "bagaswh.php".
+        Then you can open their github pages and copy the https link.
+```
+
