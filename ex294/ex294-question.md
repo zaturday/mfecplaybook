@@ -68,8 +68,20 @@ Example url: http://content.example.com/rhce/ansible-posix....
 ```
 ***On the Control Node***
 
+# Install packages
+### QUESTION #3-1: CyberCustodians
+```
+Instructions:
+3-1. Create a playbook called /home/student/ansible/packages.yml and perform the following tasks:
+- install the php & mariadb on hosts in the dev,test and prod host group
+- install the RPM Development Tools package group on host in the dev host group
+- Update all packages to the latest version on host in the dev host group
+```
+
+***On the Control Node***
+
 # Use a RHEL system role
-### QUESTION #3-2:
+### QUESTION #3-2: CyberCustodians
 ```
 Instructions:
 
