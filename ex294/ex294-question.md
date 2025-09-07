@@ -116,3 +116,53 @@ https://github.com/RedHatRanger/balancer.git                       (balancer)
         Then you can open their github pages and copy the https link.
 ```
 
+# Create Offline Role For Apache
+### QUESTION #5:
+```
+Instructions:
+
+5. Create an offline role named "apache" under the roles directory.
+i) install the httpd package and the service should be started and enabled.
+ii) host the webpage using the template.j2
+iii) the template.j2 should contain:
+     Welcome to HOSTNAME ON IPADDRESS
+     where hostname is the Fully Qualified Domain Name (FQDN)
+iv) create the playbook called "apache_role.yml" and run the role on the webservers group.
+```
+
+# Create and Run a Roles.yml Playbook
+### QUESTION #6:
+```
+Instructions:
+
+6. Create a playbook called roles.yml and it should run balancer and phpinfo roles.
+
+   Use roles from Ansible Galaxy
+Create a playbook called /home/rhel/ansible-files/roles.yml
+* The playbook contains a play that runs on host in the balancers host group and uses the balancers role.
+- This role configures a service to load balance web server request between hosts in the webservers host group.
+- Browsing to host in the balancers host group (for example http://node5.example.com) produces the following output:
+Welcome to node3.example.com on 172.28.128.103
+- Reloading the Browser produces output from the alternet web server:
+Welcome to node4. lab.example.com on 172.28.128.104
+
+* The Playbook contains a play the runs on hosts in webserver host group and uses the phpinfo role.
+- Browsing to host in the webserver host group with the URL /hello.php produces the following out [ut: Hello PHP World from FQDN
+- For example Browsing to http://node3.example.com/hello.php produces the following output:
+Hello PHP World from node3.example.com
+along with various details of the PHP configuration include the version of PHP that is installed.
+- Similarly, Browsing to http://node4.lab.example.com/hello.php, produces the following output:
+Hello PHP World from node4.example.com
+along with various details of the PHP configuration including the version of PHP that is installed
+```
+# Install Packages in Muliple Groups
+### QUESTION #7:
+```
+Instructions:
+
+7. Install packages in multiple groups
+i) Install vsftpd and mariadb-server packages in dev and test group.
+ii) Install "RPM Development Tools" group package in prod group.
+iii) Update all packages in dev group.
+iv) Use separate play for each task and playbook name should be packages.yml.
+```
