@@ -244,4 +244,59 @@ Finally /etc/myhosts should like as below:
 
 iii) The playbook name should be "hosts.yml" and run it on dev group.
 ```
+## Create a vault file
+### QUESTION #12:
+```
+Instructions:
 
+﻿12. Create an encrypted variable file locker.yml and that file should contain variable and its value.
+
+  pw_developer is value Iamdev
+  pw_manager is value Iammgr
+
+  i) locker.yml file should be encrypted using password "whenyouwishuponastar"
+  ii) store password in a file named secret.txt, which is used to encrypt the variable file.
+```
+## Create a users playbook
+### QUESTION #13:
+```
+Instructions:
+
+﻿13. Download the variable file
+"http://content.example.com/Rhce/user_list.yml" and write a playbook named "users.yml" and then run the playbook
+on all the nodes using two variable files user_list.yml and locker.yml.
+
+####################### NOTE: For this lab we will use the link below: ################################################
+wget https://raw.githubusercontent.com/RedHatRanger/RHCE9Vagrant/main/rhce-practice-questions/golden_files/user_list.yml
+
+i)  * Create a group opsdev
+    * Create user from users varaible who job is equal to developer and need to be in opsdev group
+    * Assign a password using SHA512 format and run playbook on dev and test group.
+    * User password is {{ pw_developer }}
+
+ii) * Create a group opsmgr
+    * Create user from users varaible who job is equal to manager and need to be in opsmgr group
+    * Assign a password using SHA512 format and run playbook on prod group.
+    * User password is {{ pw_manager }}
+
+iii) Use when condition for each play
+```
+## Rekey the encrypted salaries playbook
+### QUESTION #14:
+```
+Instructions:
+
+14. Rekey variable file from "http://content.example.com/Rhce/salaries.yml"
+
+i) Old password: cisco
+ii) New password: redhat
+```
+## Create a crontab playbook
+### QUESTION #15:
+```
+Instructions:
+
+15. Create a cronjob for the user rhel on all nodes, playbook name is crontab.yml and the job details are below:
+
+  i) Every 2 minutes the job will execute logger "EX294 in progress".
+```
