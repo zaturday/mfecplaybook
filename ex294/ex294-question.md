@@ -300,3 +300,34 @@ Instructions:
 
   i) Every 2 minutes the job will execute logger "EX294 in progress".
 ```
+## Create an lv playbook
+### QUESTION #16:
+```
+Instructions:
+
+16. Create a logical volume named data of size 1500 MiB from the volume group research.
+i) Verify if the volume group research does not exist, and if so, display the debug message:
+      "Volume Group research not found".
+ii) If the requested logical volume size (1500 MiB) cannot be created, display the debug message:
+      "Could not create a logical volume of that size. Using 800 MiB instead."
+          and proceed to create an 800 MiB volume.
+iii) If the logical volume is created, assign the file system as "ext4".
+iv) Do NOT mount the logical volume in any way.
+v) The playbook name is lv.yml and it should run on all managed nodes.
+```
+## Create a timesync playbook
+### QUESTION #17:
+```
+Instructions:
+
+﻿17. Use a RHEL timesync system role:
+
+ i) Create a playbook called "timesync.yml" that:
+ - Runs on all managed nodes
+ - Uses the timesync role
+ - Configures the role to use the currently active NTP provider
+ - Configure the role to use the time server classroom.lab.example.com
+ - Configure the role to enable the iburst parameter
+
+# For this example we will use our ansible control node to sync up with
+```
