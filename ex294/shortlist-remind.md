@@ -8,14 +8,22 @@ remide before exam
 - file  > optional is setype for using security context
 - copy   > optional is setype for using security context and changing src to contect for write some to file
 - dnf, yum
+- replace
 - firewalld  #collection posix firewalld
+- lvol
+- debug
+- services
+- setup # list all facts
 
-services
+
 
 
 ```
 
 ```
+get for one server to text
+ansible servera -m setup > facts.log
+
 {{ ansible_facts.XXXXXX.XXXX }}
 fqdn
 hostname
