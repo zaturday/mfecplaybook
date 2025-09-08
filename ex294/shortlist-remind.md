@@ -21,3 +21,13 @@ fqdn
 hostname
 default_ipv4.address
 ```
+
+
+```
+## get vars form another
+
+{% for host in groups['all'] %}
+{{ hostvars[host].ansible_default_ipv4.address }} {{ hostvars[host].ansible_fqdn }} {{ hostvars[host].ansible_hostname }}
+{%endfor%}
+
+```
