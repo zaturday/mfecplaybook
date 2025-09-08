@@ -1,4 +1,7 @@
-mudule list
+module list
+remide before exam
+
+
 ```
 yum_repository
 file  > optional is setype for using security context
