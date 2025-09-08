@@ -166,3 +166,18 @@ ii) Install "RPM Development Tools" group package in prod group.
 iii) Update all packages in dev group.
 iv) Use separate play for each task and playbook name should be packages.yml.
 ```
+
+## Create webcontent playbook
+### QUESTION #8:
+```
+Instructions:
+
+8. Create a playbook called webcontent.yml and it should run on webservers group.
+   i) create a directory /webdev and it should be owned by wheel group.
+  ii) Assign permissions for user=rwx, group=rwx, others=rx and group special permission should be applied to /webdev.
+ iii) /webdev directory should have the same selinux context type as "httpd" (httpd_sys_content_t)
+  iv) Create a soft link /webdev to /var/www/html/webdev.
+   v) Create index.html file under /webdev and file should have content "Development".
+  vi) Allow traffic through the firewall for http.
+
+```
