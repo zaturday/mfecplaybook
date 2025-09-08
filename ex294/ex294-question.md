@@ -181,3 +181,67 @@ Instructions:
   vi) Allow traffic through the firewall for http.
 
 ```
+# Create a hwreport
+### QUESTION #9:
+```
+Instructions:
+
+9. Collect a hardware report using a playbook on all nodes.
+  i)   Download "hwreport.txt" from the url "http://content.example.com/hwreport.txt" and save it under /root.
+  ii)  If there is no information it should show "NONE"
+  iii) The name of the laybook should be "hwreport.yml"
+
+
+                                    *** NOTE ***:
+For this example we will download the file from:
+https://raw.githubusercontent.com/RedHatRanger/RHCE9Vagrant/main/rhce-practice-questions/golden_files/hwreport.txt
+
+/root/hwreport.txt should have content with node information as key=value
+#hwreport
+HOSTNAME=
+MEMORY=
+BIOS=
+DISK_SIZE_SDA=
+DISK_SIZE_SDB=
+```
+## Create an issue playbook
+### QUESTION #10:
+```
+Instructions:
+
+10. Replace file /etc/issue on all managed nodes
+
+i)   In dev group /etc/issue should have content "Development"
+ii)  In test group /etc/issue should have content "Test"
+iii) In prod group /etc/issue should have content "Production"
+iv)  Playbook name should be issue.yml and run on all managed nodes
+```
+## Create a hosts playbook
+### QUESTION #11:
+```
+Instructions:
+
+11. Download file "http://content.example.com/Rhce/myhosts.j2"
+
+  1) myhosts.j2 is having the content:
+       127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4
+       ::1 localhost localhost.localdomain localhost6 localhost.localdomain6
+
+  ii) The file should collect all node information like ipaddress,fqdn,hostname
+       and it should be same as /etc/hosts file,
+       if playbook is run on all the managed nodes it must store in /etc/myhosts.
+
+Finally /etc/myhosts should like as below:
+127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1 localhost localhost.localdomain localhost6 localhost.localdomain6
+
+172.28.128.100   control.example.com   control
+172.28.128.101   node1.example.com     node1
+172.28.128.102   node2.example.com     node2
+172.28.128.103   node3.example.com     node3
+172.28.128.104   node4.example.com     node4
+172.28.128.105   node5.example.com     node5
+
+iii) The playbook name should be "hosts.yml" and run it on dev group.
+```
+
