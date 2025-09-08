@@ -31,3 +31,8 @@ default_ipv4.address
 {%endfor%}
 
 ```
+      when: ansible_lvm.vgs.research is not defined  # Run this only if the volume group 'research' does NOT exist in ansible_lvm facts
+
+```
+ansible_lvm.vgs.research เพื่อจะหาชื่อ research แล้วโชว์ใน msg.\n
+
