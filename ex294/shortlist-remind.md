@@ -3,12 +3,16 @@ remide before exam
 
 
 ```
-yum_repository
-file  > optional is setype for using security context
-copy   > optional is setype for using security context and changing src to contect for write some to file
-dnf, yum
-gpg_rpm
-firewalld  #collection posix firewalld
+- gpg_rpm
+- yum_repository
+- file  > optional is setype for using security context
+- copy   > optional is setype for using security context and changing src to contect for write some to file
+- dnf, yum
+- firewalld  #collection posix firewalld
+
+services
+
+
 ```
 
 ```
